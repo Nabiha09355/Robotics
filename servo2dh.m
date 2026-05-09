@@ -9,10 +9,10 @@ function dhJointAngles = servo2dh(servoAngles)
 
     % 2. Define Rotation Directions (+1 or -1)
     % (Change to -1 if a positive servo command moves the joint opposite to your Z-axis rule)
-    dir1 = 1; 
-    dir2 = 1; 
-    dir3 = 1;
-    dir4 = 1;
+    dir1 = 1;  % Base usually matches
+    dir2 = -1; % Shoulder usually needs to be inverted
+    dir3 = -1; % Elbow usually needs to be inverted
+    dir4 = -1; % Wrist usually needs to be inverted
 
     % 3. Initialize Output Array
     dhJointAngles = zeros(1, 4);
